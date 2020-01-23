@@ -21,4 +21,12 @@ export class ProductRepository {
       product => category == null || category == product.category
     );
   }
+
+  getProduct(id: number): Product {
+    return this.products.find(product => product.id == id);
+  }
+
+  getCatogories(): string[] {
+    return this.categories;
+  }
 }
